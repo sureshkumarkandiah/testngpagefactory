@@ -1,4 +1,4 @@
-package com.auto.tests;
+package com.tests;
 
 import com.core.framework.DriverFactory;
 import com.core.framework.DriverManager;

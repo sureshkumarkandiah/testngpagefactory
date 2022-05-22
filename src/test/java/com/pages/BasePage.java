@@ -1,2 +1,9 @@
-package com.pages;public class BasePage {
+package com.pages;
+
+import com.tests.BaseTest;
+
+public class BasePage extends BaseTest {
+        public BasePage(){
+            super();
+        }
 }

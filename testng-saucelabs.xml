@@ -1,2 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="D:/automation/autoframework/src/test/java/com/auto/tests/LoginTest.java"><classes><class name="com.auto.tests.LoginTest"><methods><include name="login"/></methods></class></classes></test><test verbose="2" preserve-order="true" name="D:/automation/autoframework/src/test/java/com/auto/tests/NegativeLoginTests.java"><classes><class name="com.auto.tests.NegativeLoginTests"><methods><include name="lockedOutLogin"/></methods></class></classes></test><test verbose="2" preserve-order="true" name="D:/automation/autoframework/src/test/java/com/auto/tests/OrderItemsTest.java"><classes><class name="com.auto.tests.OrderItemsTest"><methods><include name="orderTwoItems"/></methods></class></classes></test></suite>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="methods" thread-count="5">
+    <listeners>
+        <listener class-name="com.core.framework.TestListener"/>
+    </listeners>
+    <test name="LoginTest">
+        <classes>
+            <class name="com.tests.LoginTest">
+                <methods>
+                    <include name="login"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="NegativeLoginTests">
+        <classes>
+            <class name="com.tests.NegativeLoginTests">
+                <methods>
+                    <include name="lockedOutLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="OrderItemsTest">
+        <classes>
+            <class name="com.tests.OrderItemsTest">
+                <methods>
+                    <include name="orderTwoItems"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

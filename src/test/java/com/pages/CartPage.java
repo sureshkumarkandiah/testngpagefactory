@@ -1,4 +1,4 @@
-package com.demo.pages;
+package com.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -6,14 +6,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-import com.core.framework.BaseTest;
 
-public class CartPage  {
-	WebDriver driver;
+public class CartPage  extends BasePage {
+
 	
-	public CartPage(WebDriver dr) {
-		this.driver = dr;
-		PageFactory.initElements(driver, this);
+	public CartPage() {
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	@FindBy(id="checkout")

@@ -1,20 +1,16 @@
-package com.demo.pages;
+package com.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.core.framework.BaseTest;
+public class ProductsPage extends BasePage {
 
-public class ProductsPage {
 	
-	
-	WebDriver driver;
-	
-	public ProductsPage(WebDriver dr) {
-		this.driver = dr;
-		PageFactory.initElements(driver, this);
+	public ProductsPage() {
+
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 	@FindBy(id="add-to-cart-sauce-labs-backpack")
@@ -39,7 +35,7 @@ public class ProductsPage {
 	
 	public CartPage clickShoppingCart() {
 		btnShoppingCart.click();	
-		return new CartPage(driver);
+		return new CartPage();
 	}
 	
 	

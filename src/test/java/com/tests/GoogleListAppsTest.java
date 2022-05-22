@@ -1,15 +1,11 @@
-package com.auto.tests;
+package com.tests;
 
 
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class GoogleListAppsTest extends BaseTest {
 

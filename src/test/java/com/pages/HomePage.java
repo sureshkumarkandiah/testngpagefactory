@@ -1,19 +1,16 @@
-package com.demo.pages;
+package com.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.core.framework.BaseTest;
 
-public class HomePage {
+public class HomePage extends BasePage {
+
 	
-	WebDriver driver;
-	
-	public HomePage(WebDriver dr) {
-		this.driver = dr;
-		PageFactory.initElements(driver, this);
+	public HomePage() {
+		PageFactory.initElements(getDriver(), this);
 	}
 	
 
@@ -42,7 +39,7 @@ public class HomePage {
 	
 	public ProductsPage login() {
 		loginBtn.click();
-		return new ProductsPage(driver);
+		return new ProductsPage();
 	}
 	
 	public String verifyLockedOutUser() {

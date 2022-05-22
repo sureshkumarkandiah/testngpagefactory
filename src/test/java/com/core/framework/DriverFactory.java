@@ -1,4 +1,4 @@
-/*package com.core.framework;
+package com.core.framework;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -9,29 +9,26 @@ import java.util.concurrent.TimeUnit;
 
 public class DriverFactory {
 
-    private DriverFactory(){
-
-    }
-
-
     // Determine which drives needs to be created
-    public static WebDriver initializeWebDriver() throws InterruptedException {
-        WebDriver driver = null;
-        String browser = "chrome";
-        if(browser.equals("chrome")) {
-             driver = WebDriverManager.chromedriver().create();
+
+
+    public static void initializeWebDriver(String browser) throws InterruptedException {
+        if (browser.equals("chrome")) {
+           WebDriver driver = WebDriverManager.chromedriver().create();
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        }
-          else if(browser.equals("edge")){
-             driver =  WebDriverManager.edgedriver().create();
+            DriverManager.setDriver(driver);
+            System.out.println("Driver After Initiated" + Thread.currentThread().getId() +" - "+ driver.hashCode());
+
+
+        } else if (browser.equals("edge")) {
+            WebDriver driver = WebDriverManager.edgedriver().create();
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+            DriverManager.setDriver(driver);
         }
 
-        return driver;
 
     }
 
 }
-*/
