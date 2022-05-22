@@ -16,7 +16,6 @@ public class GoogleTest extends BaseTest {
     public void flipkartTest (Method m) throws InterruptedException {
         getDriver().get("https://www.flipkart.com");
         System.out.println("Method : "+m.getName() + Thread.currentThread().getId() + " - " + getDriver().hashCode()+ getDriver().getTitle());
-
     }
 
 

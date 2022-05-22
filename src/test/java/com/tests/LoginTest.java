@@ -16,9 +16,7 @@ public class LoginTest extends BaseTest {
 			hp = new HomePage();
 		  
 	}
-	
- 
-	
+
 	@Test
 	public void login() {
 		System.out.println("Test Case 1 with Thread Id:- "
@@ -29,9 +27,6 @@ public class LoginTest extends BaseTest {
 		hp.setPassword("secret_sauce");
 		hp.login();
 		Assert.assertEquals("https://www.saucedemo.com/inventory.html", getDriver().getCurrentUrl());
-		
-		
-		
 	}
 
 

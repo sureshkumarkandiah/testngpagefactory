@@ -8,13 +8,7 @@ public class AmazonTest extends BaseTest {
 
     @Test
     public void amazonTest (Method m) throws InterruptedException {
-
-        System.out.println(getDriver());
         getDriver().get("https://www.amazon.com");
         System.out.println("Method : "+m.getName() + Thread.currentThread().getId() + " - " + getDriver().hashCode()+ getDriver().getTitle());
-
-
-
-
     }
 }

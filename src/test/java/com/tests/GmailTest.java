@@ -10,7 +10,5 @@ public class GmailTest extends BaseTest{
     public void gmailTest (Method m) throws InterruptedException {
         getDriver().get("https://www.gmail.com");
         System.out.println("Method : "+m.getName() + Thread.currentThread().getId() + " - " + getDriver().hashCode()+ getDriver().getTitle());
-
-
     }
 }
