@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite" parallel="methods" thread-count="5">
+
+<suite name="suite" thread-count="5" parallel="methods" >
     <listeners>
         <listener class-name="com.core.framework.TestListener"/>
     </listeners>
+    <test name="test1">
+        <classes>
+            <class name="com.tests.AmazonTest"></class>
+            <class name="com.tests.GmailTest"></class>
+        </classes>
+    </test>
+    <test name="test2">
+        <classes>
+            <class name="com.tests.GoogleTest"></class>
+        </classes>
+    </test>
     <test name="LoginTest">
         <classes>
             <class name="com.tests.LoginTest">
